@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="hello">
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-primary">Log Out</button>
+    </form>
+</div>
+<p>Hi {{user.username}}!</p>
+<a href="{% url 'allyou_canread:library' %}"><button class="btn btn-outline-secondary">Go to library</button></a>
+
+{% else %}
+
+<div class="hello">
+    <a href="{% url 'login' %}"><button class="btn btn-outline-secondary">Log In</button></a>&nbsp; 
+    &nbsp;<a href="{% url 'accounts:signup' %}"><button class="btn btn-outline-secondary">Sign Up</button></a>
+</div>
+
+<p>You are not logged in</p>
+
+<p><a href="{% url 'password_reset' %}">Forgotten Password</a></p>
+
+{% endif %}
+{% endblock %}

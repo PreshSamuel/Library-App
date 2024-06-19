@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<p>Hey, there {{user.username}}.</p>
+
+<!-- <p>Where everything word and chapters exist.</p> -->
+
+<p style="text-align: center;">What genre are you intrested in?</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="precious">
+            <div class="card-holder">
+                <div class="card">
+                    <label for="Humor">Humor</label>
+                    <input type="radio" name="choice" value="Humor">
+                </div>
+                <div class="card-2">
+                    <label for="LGBTQ+">LGBTQ+</label>
+                    <input type="radio" name="choice" value="LGBTQ+">
+                </div>
+                <div class="card-2">
+                    <label for="Mystery">Mystery</label>
+                    <input type="radio" name="choice" value="Mystery">
+                </div>
+            </div>
+            <div class="card-holder-2">
+                <div class="card">
+                    <label for="New adult">New adult</label>
+                    <input type="radio" name="choice" value="New adult">  
+                </div>
+                <div class="card-2">
+                    <label for="Non-fiction">Non-fiction</label>
+                    <input type="radio" name="choice" value="Non-fiction">
+                </div>
+                <div class="card-2">
+                    <label for="Paranormal">Paranormal</label>
+                    <input type="radio" name="choice" value="Paranormal"> 
+                </div>
+            </div>
+            <div class="card-holder-2">
+                <div class="card">
+                    <label for="Poetry">Poetry</label>
+                    <input type="radio" name="choice" value="Poetry">
+                </div>
+                <div class="card-2">
+                    <label for="Romance">Romance</label>
+                    <input type="radio" name="choice" value="Romance"> 
+                </div>
+                <div class="card-2">
+                    <label for="Science Fiction">Science <br>Fiction</label>
+                    <input type="radio" name="choice" value="Science Fiction">
+                </div>
+            </div>
+            <div class="card-holder-2">
+                <div class="card">
+                    <label for="Short Story">Short Story</label>
+                    <input type="radio" name="choice" value="Short Story"> 
+                </div>
+                <div class="card-2">
+                    <label for="Teen Fiction">Teen Fiction</label>
+                    <input type="radio" name="choice" value="Teen Fiction">
+                </div>
+                <div class="card-2">
+                    <label for="Thriller">Thriller</label>
+                    <input type="radio" name="choice" value="Thriller">
+                </div>
+            </div>
+            <div class="card-holder-2">
+                <div class="card-3">
+                    <label for="Werewolf">Werewolf</label>
+                    <input type="radio" name="choice" value="Werewolf">
+                </div>
+            </div>
+        </div>
+    </div>
+<input type="submit" value="Submit">
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const form = document.getElementById('myForm');
+        const radioButtons = form.elements['choice'];
+        let clickCount = 0;
+
+        // Add event listener to each radio button
+        for (let i = 0; i < radioButtons.length; i++) {
+            radioButtons[i].addEventListener('click', (event) => {
+                // Check if the radio button was previously clicked
+                if (!radioButtons[i].dataset.clicked) {
+                    // Increase click count
+                    clickCount++;
+                    // Mark this radio button as clicked
+                    radioButtons[i].dataset.clicked = true;
+                }
+                
+                // If the maximum of 3 radio buttons are clicked, disable the rest
+                // if (clickCount >= 3) {
+                //     for (let j = 0; j < radioButtons.length; j++) {
+                //         if (!radioButtons[j].checked && !radioButtons[j].dataset.clicked) {
+                //             radioButtons[j].disabled = true;
+                //         }
+                //     }
+                // }
+            });
+        }
+    });
+</script>
+
+<br><br>
+
+</form>      
+    
+    <!-- <select name="genre" id="">
+        <option value="Select genre" selected disabled>Select genre</option>
+        <option value="Editor's pick">Editor's pick</option>
+        <option value="The wattys">The wattys</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Contempoary">Contempoary</option>
+        <option value="Diverse Lit">Diverse Lit</option>
+        <option value="Young Adult">Young Adult</option>
+        <option value="Fanfiction">Fanfiction</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Humor">Humor</option>
+        <option value="Romance">Romance</option>
+        <option value="Short Story">Short Story</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Werewolf">Werewolf</option>
+    </select> -->    
+{% endblock content %}
+

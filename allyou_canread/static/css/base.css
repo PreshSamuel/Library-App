@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lobster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap');
+h1 {
+    font-family: "Bellota", system-ui; 
+    font-weight: 200; 
+    font-style: normal; 
+    /* font-family: "Lobster", sans-serif; 
+    font-weight: 400; 
+    font-style: normal; */
+}
+
+/* .bellota-regular { font-family: "Bellota", system-ui; font-weight: 400; font-style: normal; } .bellota-bold { font-family: "Bellota", system-ui; font-weight: 700; font-style: normal; } .bellota-light-italic { font-family: "Bellota", system-ui; font-weight: 300; font-style: italic; } .bellota-regular-italic { font-family: "Bellota", system-ui; font-weight: 400; font-style: italic; } .bellota-bold-italic { font-family: "Bellota", system-ui; font-weight: 700; font-style: italic; } */
+        
+p {
+    /* font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal; */
+    font-family: "Waiting for the Sunrise", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hello {
+    display: flex;
+    justify-content: end;
+}
+
+
+a {
+    color: #0a0a0a;
+    
+}
+
+
+.name_libary {
+    display: flex;
+    justify-content: end;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: cursive;
+    font-weight: bold;
+
+}
+
+
+.card-holder{
+    /* border: 1px solid black;  */
+    width: 50%;
+    height: 10vh;
+    margin: 0 auto;
+    margin-top: 7rem;
+    display: flex;
+    gap: 8px;
+    /* border-bottom: none; */
+}
+
+
+.card-holder-2{
+    /* border: 1px solid black;  */
+    width: 50%;
+    height: 10vh;
+    margin: 0 auto;
+    /* margin-top: 7rem; */
+    display: flex;
+    gap: 8px;
+
+}
+
+
+.card{
+    border: 1px solid black; 
+    width: 25%;
+    height: 9vh;
+    border-radius: 10px;
+    margin-left: 57px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-2{
+    border: 1px solid black; 
+    width: 25%;
+    height: 9vh;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-3{
+    border: 1px solid black; 
+    width: 25%;
+    height: 9vh;
+    border-radius: 10px;
+    margin-left: 235px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+

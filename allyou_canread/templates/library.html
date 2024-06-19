@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+<title>library</title>
+
+<!-- {% load static %} -->
+{% block content %}
+<div class="name_libary">
+    <!-- <p>Welcome {{user.username}}</p> -->
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-secondary">Log Out {{user.username}}</button>
+    </form>
+</div>
+    
+<h1>AYCR libary</h1>
+
+<p>Ouhhh! {{Choosen}} here we come! 😉</p>
+
+
+{% endblock content %}
